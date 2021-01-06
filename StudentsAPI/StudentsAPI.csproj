@@ -8,5 +8,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StudentsAPI.Database\StudentsAPI.Database.csproj" />
+  </ItemGroup>
+
 
 </Project>
