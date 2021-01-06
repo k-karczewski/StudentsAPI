@@ -6,10 +6,10 @@ using System.Text;
 
 namespace StudentsAPI.Database.Context
 {
-    public class StudentsAPIDbContext : DbContext
+    public class StudentsApiDbContext : DbContext
     {
         public DbSet<StudentEntity> Students { get; set; }
 
-        public StudentsAPIDbContext(DbContextOptions options) : base(options) { }
+        public StudentsApiDbContext(DbContextOptions options) : base(options) { }
     }
 }
