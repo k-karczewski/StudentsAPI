@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsAPI", "StudentsAPI.csproj", "{4D49FECF-7DDC-4969-80A6-6F82CC88FE40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsAPI.Database", "..\StudentsAPI.Database\StudentsAPI.Database.csproj", "{A2EDFEFF-5620-4C30-8D08-B28C02B9B4F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4D49FECF-7DDC-4969-80A6-6F82CC88FE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D49FECF-7DDC-4969-80A6-6F82CC88FE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D49FECF-7DDC-4969-80A6-6F82CC88FE40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EDFEFF-5620-4C30-8D08-B28C02B9B4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EDFEFF-5620-4C30-8D08-B28C02B9B4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EDFEFF-5620-4C30-8D08-B28C02B9B4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EDFEFF-5620-4C30-8D08-B28C02B9B4F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
