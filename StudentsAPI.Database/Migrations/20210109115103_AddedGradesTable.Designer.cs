@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentsAPI.Database.Context;
 
 namespace StudentsAPI.Database.Migrations
 {
     [DbContext(typeof(StudentsApiDbContext))]
-    partial class StudentsApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210109115103_AddedGradesTable")]
+    partial class AddedGradesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
