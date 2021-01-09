@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using StudentsAPI.Database.Context;
 using StudentsAPI.Database.Entities;
 using StudentsAPI.Database.Repositories.Base;
@@ -33,9 +34,10 @@ namespace StudentsAPI.Database.Repositories
             return student;
         }
 
-        public void Create(StudentEntity student)
+        public StudentEntity Create(StudentEntity student)
         {
-            DbSet.Add(student);
+            EntityEntry<StudentEntity> newStudent = DbSet.Add(student);
+            return newStudent.Entity;
         }
 
         public void Delete(int studentId)

@@ -9,7 +9,7 @@ namespace StudentsAPI.Database.Repositories.Interfaces
     {
         List<StudentEntity> GetAll();
         StudentEntity GetById(int studentId);
-        void Create(StudentEntity student);
+        StudentEntity Create(StudentEntity student);
         void Delete(int studentId);
         void Update(StudentEntity newStudent, int studentId);
         void AssignCourse(int studentId, int courseId);
