@@ -12,6 +12,9 @@ namespace StudentsAPI.Database.Entities
         public int Age { get; set; }
         public int IndexNumber { get; set; }
 
-        public AddressEntity Address { get; set; }
+        public virtual AddressEntity Address { get; set; }
+
+        public int GradeId { get; set; }
+        public virtual GradeEntity Grade { get; set; }
     }
 }

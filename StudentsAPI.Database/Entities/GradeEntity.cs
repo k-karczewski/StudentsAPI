@@ -7,10 +7,8 @@ namespace StudentsAPI.Database.Entities
     public class GradeEntity
     {
         public int Id { get; set; }
-        public string GradeValue { get; set; }
-        public string Subject { get; set; }
+        public string GradeName { get; set; }
 
-        public int StudentId { get; set; }
-        public virtual StudentEntity Student { get; set; }
+        public virtual List<StudentEntity> Students { get; set; }
     }
 }
