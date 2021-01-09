@@ -8,6 +8,8 @@ namespace StudentsAPI.Database.Context
         public DbSet<AddressEntity> Addresses { get; set; }
         public DbSet<StudentEntity> Students { get; set; }
         public DbSet<GradeEntity> Grades { get; set; }
+        public DbSet<CourseEntity> Courses { get; set; }
+        public DbSet<StudentCourseEntity> StudentCourses { get; set; }
     
         public StudentsApiDbContext(DbContextOptions options) : base(options) { }
 
@@ -30,6 +32,13 @@ namespace StudentsAPI.Database.Context
                 address.Property(p => p.Street).IsRequired();
                 address.Property(p => p.City).IsRequired();
                 address.Property(p => p.Country).IsRequired();
+            });
+
+            modelBuilder.Entity<StudentCourseEntity>(entity =>
+            {
+                entity.HasKey(k => new { k.StudentId, k.CourseId });
+                entity.HasOne(s => s.Student).WithMany(sc => sc.StudentCourses).HasForeignKey(k => k.StudentId);
+                entity.HasOne(c => c.Course).WithMany(sc => sc.StudentCourses).HasForeignKey(k => k.CourseId);
             });
         }
     }
