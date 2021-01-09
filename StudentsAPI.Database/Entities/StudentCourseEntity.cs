@@ -10,6 +10,6 @@ namespace StudentsAPI.Database.Entities
         public virtual StudentEntity Student { get; set; }
 
         public int CourseId { get; set; }
-        public CourseEntity Course { get; set; }
+        public virtual CourseEntity Course { get; set; }
     }
 }
