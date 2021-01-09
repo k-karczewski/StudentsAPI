@@ -7,6 +7,7 @@ namespace StudentsAPI.Database.Context
     {
         public DbSet<AddressEntity> Addresses { get; set; }
         public DbSet<StudentEntity> Students { get; set; }
+        public DbSet<GradeEntity> Grades { get; set; }
     
         public StudentsApiDbContext(DbContextOptions options) : base(options) { }
 
