@@ -19,6 +19,8 @@ namespace StudentsAPI.Database.Context
                 student.Property(p => p.FirstName).IsRequired();
                 student.Property(p => p.LastName).IsRequired();
                 student.Property(p => p.LastName).IsRequired();
+
+                student.HasOne(g => g.Grade).WithMany(s => s.Students).HasForeignKey(k => k.GradeId).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<AddressEntity>(address =>
@@ -28,7 +30,6 @@ namespace StudentsAPI.Database.Context
                 address.Property(p => p.City).IsRequired();
                 address.Property(p => p.Country).IsRequired();
             });
-
         }
     }
 }
