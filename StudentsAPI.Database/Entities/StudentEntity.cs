@@ -16,5 +16,7 @@ namespace StudentsAPI.Database.Entities
 
         public int GradeId { get; set; }
         public virtual GradeEntity Grade { get; set; }
+
+        public virtual List<StudentCourseEntity> StudentCourses { get; set; }
     }
 }
