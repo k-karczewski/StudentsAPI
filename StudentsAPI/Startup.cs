@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StudentsAPI.Database.Context;
+using StudentsAPI.Database.Repositories;
+using StudentsAPI.Database.Repositories.Interfaces;
 using System;
 
 namespace StudentsAPI
@@ -22,7 +24,9 @@ namespace StudentsAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<StudentsApiDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddControllers();
+            services.AddScoped<IStudentsRepository, StudentsRepository>();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                                            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
